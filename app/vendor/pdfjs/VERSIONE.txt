@@ -1,0 +1,3 @@
+pdfjs-dist 4.10.38 (build legacy, compatibile con Safari meno recenti)
+Fonte: registro npm, pacchetto pdfjs-dist. Licenza: Apache 2.0 (vedi LICENSE).
+File rinominati da .mjs a .js (stesso contenuto) per essere serviti con il tipo JavaScript da qualsiasi hosting.

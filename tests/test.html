@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test · Calcio a 8</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 16px; line-height: 1.4; }
+    li { margin: 4px 0; }
+    .ok { color: #1f6f47; }
+    .ko { color: #b3261e; font-weight: 600; }
+    pre { white-space: pre-wrap; margin: 4px 0 0 18px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Test</h1>
+  <p id="sintesi">Esecuzione…</p>
+  <ul id="esiti"></ul>
+  <script type="module">
+    import './tutti.js';
+    import { esegui } from './harness.js';
+
+    const esiti = await esegui();
+    const falliti = esiti.filter(e => !e.ok).length;
+    document.querySelector('#sintesi').textContent = `${esiti.length - falliti}/${esiti.length} test superati`;
+    const ul = document.querySelector('#esiti');
+    for (const e of esiti) {
+      const li = document.createElement('li');
+      li.className = e.ok ? 'ok' : 'ko';
+      li.textContent = `${e.ok ? '✓' : '✗'} ${e.nome}`;
+      if (!e.ok) {
+        const pre = document.createElement('pre');
+        pre.textContent = e.errore;
+        li.append(pre);
+      }
+      ul.append(li);
+    }
+  </script>
+</body>
+</html>

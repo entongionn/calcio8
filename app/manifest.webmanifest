@@ -1,0 +1,17 @@
+{
+  "name": "Calcio a 8 · Campionato AICS Siena",
+  "short_name": "Calcio a 8",
+  "description": "Risultati, classifiche e marcatori del campionato provinciale AICS di calcio a 8.",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f6f3",
+  "theme_color": "#1f6f47",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
