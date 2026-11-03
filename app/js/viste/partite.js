@@ -18,6 +18,17 @@ function etichettaStato(p) {
   return null;
 }
 
+// Marcatori a favore di una squadra: "Abbate Giuseppe 2, Rossi Mario (aut.)".
+function marcatoriDi(a, p, squadra) {
+  return p.eventi.marcatori
+    .filter(m => m.squadra === squadra)
+    .map(m => {
+      const nome = a.giocatori?.find(g => g.id === m.giocatore)?.nome ?? '';
+      return `${esc(nome)}${m.gol > 1 ? ` ${m.gol}` : ''}${m.autorete ? ' (aut.)' : ''}`;
+    })
+    .join(', ');
+}
+
 export function vistaPartite(el, [giornataParam, filtro = 'tutti']) {
   const a = stato.corrente();
   if (!a) return vistaBenvenuto(el);
@@ -97,6 +108,11 @@ export function vistaPartite(el, [giornataParam, filtro = 'tutti']) {
                 <span class="punteggio${p.gol ? '' : ' vuoto'}">${p.gol ? `${p.gol.casa} – ${p.gol.ospite}` : '–'}</span>
                 <span class="ospite">${esc(nomeSquadra(a, p.ospite))}</span>
               </span>
+              ${p.eventi?.marcatori?.length ? `
+                <span class="marcatori-partita">
+                  <span>${marcatoriDi(a, p, p.casa)}</span>
+                  <span class="ospite">${marcatoriDi(a, p, p.ospite)}</span>
+                </span>` : ''}
             </button>
           </li>`;
         }).join('')}

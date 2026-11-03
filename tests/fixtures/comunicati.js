@@ -129,3 +129,53 @@ export const RISULTATI_G1 = [
   ['C', 'vico-alto', 'sienterina', 2, 2],
   ['C', 'ponte-d-arbia', 'warriors', 5, 0],
 ];
+
+// Post Facebook reali del comitato (1ª giornata), copiati dal telefono.
+export const POST_LORNANO_MONTERONI = `1' GIORNATA - GIRONE B
+Lornano - Monteroni 1-0
+Per il Lornano rete vittoria di Zapata Garces Cesar
+Ammoniti: Marruganti Mattia (Lornano) 
+Caushi Giulio (Monteroni) 
+Espulsi: nessuno
+Arbitro: Lorenzini Simone`;
+
+export const POST_ARTICO_AVIS = `1^ GIORNATA - GIRONE B
+Artico Senese - Avis Asta Taverne 3-2
+Per l'Artico Senese reti di Mazzoni Massimo, Bindi Niccolò e Chierici Lorenzo.
+Per l'Avis Asta Taverne doppietta di Abbate Giuseppe.
+Ammoniti: Gigli Lorenzo (Artico Senese) e Natale Pasquale (Avis)
+Espulsi: Chierici Alessandro (Artico Senese)
+Arbitro: Vigni Filippo`;
+
+export const POST_RIEPILOGO = `Classifiche dopo la 1' giornata:
+Girone A:
+Terre di Siena 3
+Sporting Uopini 3
+I Briganti 3
+Old Boys 0
+Castellina in Chianti 0
+Agriarte 0
+S. Andrea 0
+Marcatori:
+2 - Koffi Joel, Schillaci Davide e Stohniienko Vlacheslav (Terre di Siena) 
+Girone B:
+Sienna United 3
+Artico Senese 3
+Lornano 3
+Monteroni 0
+Avis Asta Taverne 0
+Borussia Robur 0
+Marcatori: 
+3 - Hodza Meldin (Sienna United) 
+2 - Diana Giuseppe e Spada Alessandro (Sienna United) 
+2 - Abbate Giuseppe (Avis Asta Taverne) 
+Girone C:
+Ponte d'Arbia 3
+Atletico Menta 3
+Vico Alto 1
+Sienterina 1
+Road to Murlo 0
+Warriors 0
+Marcatori:
+2 - Tramacere Guido (Ponte d'Arbia) 
+2 - Garofano Giovanni (Atletico Menta) Vedi meno`;

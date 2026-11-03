@@ -1,14 +1,14 @@
 import * as db from '../db.js';
 import * as stato from '../stato.js';
 import * as backup from '../backup.js';
-import { confrontaArchivi, unisciArchivi, verificaArchivio } from '../archivio.js';
+import { confrontaArchivi, migraArchivio, unisciArchivi, verificaArchivio } from '../archivio.js';
 import { avvisa, esc, formattaDataOra, puoCondividereFile, uid } from '../util.js';
 import { gironiCampionato, nomeSquadra, opzioniSquadre } from './comuni.js';
 
 // Backup letto da file e in attesa di conferma.
 let daImportare = null;
 
-const NOMI_COLLEZIONI = { squadre: 'Squadre', competizioni: 'Competizioni', gironi: 'Gironi', partite: 'Partite', penalita: 'Penalizzazioni' };
+const NOMI_COLLEZIONI = { squadre: 'Squadre', competizioni: 'Competizioni', gironi: 'Gironi', partite: 'Partite', penalita: 'Penalizzazioni', giocatori: 'Giocatori' };
 
 export async function vistaGestione(el) {
   const a = stato.corrente();
@@ -49,8 +49,9 @@ export async function vistaGestione(el) {
 
     ${a ? `
     <section class="scheda">
-      <h2>Calendario e squadre</h2>
+      <h2>Importazione</h2>
       <div class="azioni">
+        <a class="bottone primario" href="#/facebook">Importa post Facebook</a>
         <a class="bottone secondario" href="#/calendario">Importa calendario</a>
         <a class="bottone secondario" href="#/squadre">Squadre e nomi alternativi</a>
       </div>
@@ -152,7 +153,7 @@ export async function vistaGestione(el) {
 async function leggiBackup(file, el) {
   let dati;
   try {
-    dati = JSON.parse(await file.text());
+    dati = migraArchivio(JSON.parse(await file.text()));
   } catch {
     avvisa('Il file non è un JSON valido', 'errore');
     return;

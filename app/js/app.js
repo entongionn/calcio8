@@ -8,14 +8,18 @@ import { vistaPartite } from './viste/partite.js';
 import { vistaGestione } from './viste/gestione.js';
 import { vistaCalendario } from './viste/calendario.js';
 import { vistaSquadre } from './viste/squadre.js';
+import { vistaFacebook } from './viste/facebook.js';
+import { vistaMarcatori } from './viste/marcatori.js';
 
 // Vista → [funzione, scheda della barra di navigazione]
 const VISTE = {
   classifiche: [vistaClassifiche, 'classifiche'],
   partite: [vistaPartite, 'partite'],
+  marcatori: [vistaMarcatori, 'marcatori'],
   gestione: [vistaGestione, 'gestione'],
   calendario: [vistaCalendario, 'gestione'],
   squadre: [vistaSquadre, 'gestione'],
+  facebook: [vistaFacebook, 'gestione'],
 };
 
 function rotta() {

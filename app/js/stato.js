@@ -2,6 +2,7 @@
 // Ogni modifica passa da `modifica()`, che lavora su una copia e la salva tutta insieme.
 
 import * as db from './db.js';
+import { migraArchivio } from './archivio.js';
 
 let archivio = null;
 let volatile = false;
@@ -20,7 +21,7 @@ export async function carica() {
     volatile = true;
     return null;
   }
-  archivio = (await db.leggiArchivio()) ?? null;
+  archivio = migraArchivio((await db.leggiArchivio()) ?? null);
   return archivio;
 }
 

@@ -4,3 +4,4 @@ import './calendario.test.js';
 import './classifica.test.js';
 import './archivio.test.js';
 import './pdf.test.js';
+import './facebook.test.js';

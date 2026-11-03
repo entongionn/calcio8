@@ -1,6 +1,6 @@
 # Calcio a 8 · Campionato AICS Siena
 
-PWA per risultati, classifiche e (prossimamente) marcatori e disciplina del campionato provinciale
+PWA per risultati, classifiche, marcatori e (prossimamente) disciplina del campionato provinciale
 AICS di calcio a 8. Funziona nel browser di iPhone, Android e PC, anche offline, senza server e
 senza costi. I requisiti sono in [Prompt_Aics.md](Prompt_Aics.md).
 
@@ -14,7 +14,7 @@ Sul telefono: iPhone → Safari → Condividi → *Aggiungi alla schermata Home*
 | 1 | Struttura PWA, archivio sul dispositivo, backup e ripristino | fatto |
 | 2 | Squadre, gironi, nomi alternativi, importazione del calendario dal PDF del comunicato (o dal testo incollato) | fatto |
 | 3 | Classifiche con tutti i criteri di spareggio del regolamento | fatto |
-| 4 | Lettura dei post Facebook (risultati provvisori) | da fare |
+| 4 | Lettura dei post Facebook (risultati provvisori, marcatori, cartellini) e classifica marcatori | fatto |
 | 5 | Importazione del CUF in PDF (dati ufficiali, marcatori, disciplina, Fair-Play) | da fare |
 | 6 | Coppa AICS | da fare |
 | 7 | Pubblicazione dei dati, area pubblica, istruzioni di installazione | da fare |
@@ -38,7 +38,8 @@ node tests/run.js
 ```
 
 I test usano i dati reali dei Comunicati Ufficiali n.1 e n.2: calendario fino a Natale (75 partite,
-con i suoi errori), risultati della 1ª giornata e coordinate dei frammenti di testo dei due PDF.
+con i suoi errori), risultati della 1ª giornata, coordinate dei frammenti di testo dei due PDF e post
+Facebook del comitato.
 I PDF non sono nel progetto, perché contengono numeri di telefono e IBAN.
 
 ## Struttura
@@ -50,6 +51,8 @@ app/                  l'app da pubblicare (solo file statici)
     archivio.js       formato dei dati, confronto e unione di archivi (backup senza duplicati)
     calendario.js     lettura e controllo del calendario (dal PDF o dal testo incollato)
     pdf.js            estrazione del testo dai PDF dei comunicati
+    facebook.js       lettura dei post Facebook: risultato, marcatori, ammoniti, espulsi, arbitro
+    marcatori.js      classifica marcatori
     classifica.js     calcolo della classifica secondo il Par.2 del regolamento
     normalizza.js     riconoscimento dei nomi di squadra scritti male
     seed.js           squadre e gironi 2026-2027
@@ -73,7 +76,10 @@ strumenti/            genera_icone.py: rigenera le icone PNG (solo libreria stan
 
 - I dati stanno nel browser del dispositivo (IndexedDB). **Non si sincronizzano** con altri dispositivi.
 - Per spostarli o conservarli si usa il **backup** (file JSON). L'importazione mostra un'anteprima
-  (nuovi / uguali / diversi) e non crea duplicati: ogni partita ha un id derivato da girone + casa + ospite.
+  (nuovi / uguali / diversi) e non crea duplicati: ogni partita ha un id derivato da girone + casa + ospite,
+  ogni giocatore da squadra + nome. Le grafie diverse dello stesso giocatore restano come nomi alternativi.
+- Formato dei dati: versione 2 (aggiunti giocatori ed eventi). I dati e i backup della versione 1 vengono
+  aggiornati automaticamente.
 - Prima di ogni operazione rischiosa, e una volta al giorno, l'app salva una **copia automatica**
   (ultime 30), ripristinabile da Gestione.
 - Su iPhone, eliminare l'icona dalla schermata Home cancella i dati dell'app: serve un backup.
@@ -86,5 +92,8 @@ strumenti/            genera_icone.py: rigenera le icone PNG (solo libreria stan
   Il regolamento non lo specifica. L'alternativa (proseguire con il criterio successivo) è già implementata:
   `riapplica: false` in `classifica.js`.
 - **Scontri diretti non ancora giocati:** non contano e si passa al criterio successivo, come fanno i comunicati.
+- **Post Facebook con squadre scritte al contrario:** se la giornata del post (o, senza giornata, la data)
+  indica la partita con casa e ospite invertiti, l'app la usa e lo segnala.
+- **Gare a tavolino:** i gol non contano per la classifica marcatori.
 - **Fair-Play:** il criterio è pronto, ma i dati arriveranno con il passo 5. Fino ad allora una parità che
   arriva al Fair-Play viene segnalata e si può risolvere con l'ordine del sorteggio.

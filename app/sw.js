@@ -3,7 +3,7 @@
 // si cambia VERSIONE, così la cache vecchia viene eliminata. pdf.js (vendor/) non è nell'elenco
 // perché serve solo a chi importa i comunicati: entra in cache al primo utilizzo.
 
-const VERSIONE = 'aics-v3';
+const VERSIONE = 'aics-v4';
 
 const FILE = [
   './',
@@ -20,6 +20,8 @@ const FILE = [
   './js/calendario.js',
   './js/classifica.js',
   './js/db.js',
+  './js/facebook.js',
+  './js/marcatori.js',
   './js/normalizza.js',
   './js/pdf.js',
   './js/seed.js',
@@ -28,7 +30,9 @@ const FILE = [
   './js/viste/calendario.js',
   './js/viste/classifiche.js',
   './js/viste/comuni.js',
+  './js/viste/facebook.js',
   './js/viste/gestione.js',
+  './js/viste/marcatori.js',
   './js/viste/partite.js',
   './js/viste/squadre.js',
 ];

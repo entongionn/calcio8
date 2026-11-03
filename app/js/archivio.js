@@ -2,12 +2,16 @@
 // confronto e unione di due archivi. L'archivio è un unico oggetto JSON: è lo stesso
 // formato usato per il salvataggio sul dispositivo, per i backup e per la pubblicazione.
 
+import { slug } from './normalizza.js';
+
 export const FORMATO = 'aics-calcio8';
-export const VERSIONE_SCHEMA = 1;
+// Versione 2: aggiunti i giocatori e gli eventi delle partite (marcatori, ammoniti, espulsi).
+export const VERSIONE_SCHEMA = 2;
 
 // Collezioni di record identificati da `id`. L'id di una partita è derivato da
-// girone + casa + ospite, quindi due copie della stessa partita hanno lo stesso id.
-export const COLLEZIONI = ['squadre', 'competizioni', 'gironi', 'partite', 'penalita'];
+// girone + casa + ospite, quello di un giocatore da squadra + nome: due copie dello
+// stesso record hanno quindi lo stesso id.
+export const COLLEZIONI = ['squadre', 'competizioni', 'gironi', 'partite', 'penalita', 'giocatori'];
 
 export const STATI_PARTITA = {
   programmata: 'Da giocare',
@@ -29,6 +33,8 @@ export function archivioVuoto() {
     gironi: [],
     partite: [],
     penalita: [],
+    // { id, nome, squadra, alias }: alias sono le altre grafie dello stesso nome.
+    giocatori: [],
     // Ordine stabilito per sorteggio, per girone: { A: ['id1', 'id2'] }.
     sorteggi: {},
   };
@@ -36,6 +42,20 @@ export function archivioVuoto() {
 
 export function archivioDaSeed(seed) {
   return { ...archivioVuoto(), ...structuredClone(seed), aggiornato: new Date().toISOString() };
+}
+
+/** Porta un archivio (salvato o da backup) di una versione precedente al formato attuale. */
+export function migraArchivio(dati) {
+  if (!dati || typeof dati !== 'object' || dati.formato !== FORMATO) return dati;
+  if (!(dati.versioneSchema >= 1) || dati.versioneSchema >= VERSIONE_SCHEMA) return dati;
+  const out = structuredClone(dati);
+  if (!Array.isArray(out.giocatori)) out.giocatori = [];
+  out.versioneSchema = VERSIONE_SCHEMA;
+  return out;
+}
+
+export function idGiocatore(squadra, nome) {
+  return `${squadra}:${slug(nome)}`;
 }
 
 export function idPartita(girone, casa, ospite) {
