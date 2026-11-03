@@ -3,7 +3,7 @@ import { analizzaCalendario, applicaCalendario, separaRighe, validaCalendario } 
 import { totaleGiornate } from '../archivio.js';
 import { testoDaPdf } from '../pdf.js';
 import { avvisa, esc, formattaData } from '../util.js';
-import { gironiCampionato, nomeSquadra, vistaBenvenuto } from './comuni.js';
+import { gironiCampionato, nomeSquadra, testata, vistaBenvenuto } from './comuni.js';
 
 // Testo letto (dal PDF o incollato) e analisi in corso: sopravvivono ai ridisegni della vista.
 // Il testo resta solo in memoria: dell'intero comunicato si salvano soltanto le partite.
@@ -25,8 +25,7 @@ export function vistaCalendario(el) {
   if (!a) return vistaBenvenuto(el);
 
   el.innerHTML = `
-    <p class="briciole"><a href="#/gestione">Gestione</a> ›</p>
-    <h1>Importa calendario</h1>
+    ${testata('Importa calendario', '#/gestione')}
     <section class="scheda">
       <p>Carica il PDF del Comunicato Ufficiale: l'app legge il calendario e ti mostra le partite prima di importarle.
       Il resto del comunicato (regolamento, recapiti) viene ignorato e non viene salvato.</p>

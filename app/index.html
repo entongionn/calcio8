@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Calcio a 8 · Classifiche</title>
+  <title>Calcio a 8 · AICS Siena</title>
   <meta name="description" content="Risultati, classifiche e marcatori del campionato provinciale AICS di calcio a 8.">
-  <meta name="theme-color" content="#1f6f47" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#12261b" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0b0a11">
+  <meta name="color-scheme" content="dark">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Calcio a 8">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -24,21 +24,25 @@
     <p class="caricamento">Caricamento…</p>
   </main>
   <nav class="barra-nav" aria-label="Sezioni">
-    <a href="#/classifiche" data-scheda="classifiche">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
-      <span>Classifiche</span>
+    <a href="#/home" data-scheda="home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg>
+      <span>Home</span>
     </a>
-    <a href="#/partite" data-scheda="partite">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-      <span>Partite</span>
+    <a href="#/classifiche" data-scheda="classifica">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg>
+      <span>Classifica</span>
     </a>
-    <a href="#/marcatori" data-scheda="marcatori">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l4.3 3.1-1.6 5H9.3l-1.6-5z"/><path d="M12 3v4.5M3.4 9.6l4.3 1M20.6 9.6l-4.3 1M7 19.3l2.3-3.7M17 19.3l-2.3-3.7"/></svg>
-      <span>Marcatori</span>
+    <a href="#/partite" data-scheda="calendario">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      <span>Calendario</span>
     </a>
-    <a href="#/gestione" data-scheda="gestione">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
-      <span>Gestione</span>
+    <a href="#/squadre" data-scheda="squadre">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.2c3 .2 5.5 2.6 5.5 5.8"/></svg>
+      <span>Squadre</span>
+    </a>
+    <a href="#/altro" data-scheda="altro">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <span>Altro</span>
     </a>
   </nav>
   <div id="avviso" class="notifica" role="status" aria-live="polite" hidden></div>

@@ -1,7 +1,7 @@
 import * as stato from '../stato.js';
 import { analizzaPost, applicaPost, validaPost } from '../facebook.js';
 import { avvisa, esc } from '../util.js';
-import { nomeSquadra, vistaBenvenuto } from './comuni.js';
+import { nomeSquadra, testata, vistaBenvenuto } from './comuni.js';
 
 // Testo incollato e post in revisione: sopravvivono ai ridisegni della vista.
 let testo = '';
@@ -17,24 +17,67 @@ const ESITI = {
 };
 const salvabile = p => p.esito === 'nuovo' || p.esito === 'aggiorna';
 
+// Salvataggio automatico dei post senza avvisi: preferenza di questo telefono.
+const CHIAVE_AUTOMATICO = 'aics-salvataggio-automatico';
+function automatico() {
+  try {
+    return localStorage.getItem(CHIAVE_AUTOMATICO) !== 'no';
+  } catch {
+    return true;
+  }
+}
+
+// Testo ricevuto da un'altra app con "Condividi" (Android), in attesa di essere analizzato.
+let testoCondiviso = null;
+export function riceviTestoCondiviso(t) {
+  testoCondiviso = t;
+}
+
+/** Analizza il testo e, se attivo, salva subito le partite che non hanno avvisi. */
+async function analizzaEImporta(el, nuovoTesto) {
+  testo = nuovoTesto;
+  const a = stato.corrente();
+  posts = testo.trim() ? analizzaPost(testo, a) : [];
+  if (testo.trim() && !posts.length) {
+    avvisa('Nel testo non ho trovato risultati di partite', 'errore');
+  } else if (automatico()) {
+    const pronti = posts.filter(p => salvabile(p) && !p.avvisi.some(x => x.livello !== 'info'));
+    if (pronti.length) await salva(pronti);
+    const daVedere = posts.filter(salvabile).length;
+    if (daVedere) setTimeout(() => avvisa(`${daVedere === 1 ? 'Una partita ha' : `${daVedere} partite hanno`} avvisi: controlla e salva`), 4200);
+  }
+  vistaFacebook(el);
+  el.querySelector('#post')?.scrollIntoView({ behavior: 'smooth' });
+}
+
 export function vistaFacebook(el) {
   const a = stato.corrente();
   if (!a) return vistaBenvenuto(el);
+  if (testoCondiviso) {
+    const t = testoCondiviso;
+    testoCondiviso = null;
+    analizzaEImporta(el, t);
+    return;
+  }
   const daSalvare = posts.filter(salvabile).length;
+  const puoiIncollare = Boolean(navigator.clipboard?.readText);
 
   el.innerHTML = `
-    <p class="briciole"><a href="#/gestione">Gestione</a> ›</p>
-    <h1>Importa post Facebook</h1>
+    ${testata('Post Facebook', '#/altro')}
     <section class="scheda">
-      <p>Su Facebook tieni premuto sul testo del post, scegli <strong>Copia</strong> e incollalo qui.
-      Puoi incollare più post insieme. I risultati vengono salvati come <strong>provvisori</strong>,
-      finché non arriva il Comunicato Ufficiale.</p>
-      <label class="nascosta" for="testo-post">Testo dei post</label>
-      <textarea id="testo-post" rows="7" placeholder="1^ GIORNATA - GIRONE B&#10;Artico Senese - Avis Asta Taverne 3-2&#10;Per l'Artico Senese reti di …">${esc(testo)}</textarea>
-      <div class="azioni">
-        <button class="primario" id="analizza">Analizza</button>
-        ${posts.length ? '<button class="collegamento" id="svuota">Ricomincia</button>' : ''}
-      </div>
+      <p>Su Facebook tieni premuto sul testo del post e scegli <strong>Copia</strong>, poi torna qui.
+      I risultati diventano <strong>provvisori</strong> finché non arriva il Comunicato Ufficiale, e vengono pubblicati per tutti.</p>
+      ${puoiIncollare ? '<button class="primario" id="incolla" style="width:100%">Incolla dagli appunti e importa</button>' : ''}
+      <label class="scelta"><input type="checkbox" id="automatico" ${automatico() ? 'checked' : ''}> Salva da solo le partite senza avvisi</label>
+      <details ${testo || !puoiIncollare ? 'open' : ''}>
+        <summary>${puoiIncollare ? 'Oppure incolla a mano' : 'Incolla il testo'}</summary>
+        <label class="nascosta" for="testo-post">Testo dei post</label>
+        <textarea id="testo-post" rows="7" placeholder="1^ GIORNATA - GIRONE B&#10;Artico Senese - Avis Asta Taverne 3-2&#10;Per l'Artico Senese reti di …">${esc(testo)}</textarea>
+        <div class="azioni">
+          <button class="secondario" id="analizza">Analizza</button>
+          ${posts.length ? '<button class="collegamento" id="svuota">Ricomincia</button>' : ''}
+        </div>
+      </details>
     </section>
     <div id="post">${posts.map(p => schedaPost(p, a)).join('')}</div>
     ${daSalvare > 1 ? `
@@ -42,13 +85,26 @@ export function vistaFacebook(el) {
         <button class="primario" id="salva-tutti">Salva ${daSalvare} partite</button>
       </div>` : ''}`;
 
-  el.querySelector('#analizza').addEventListener('click', () => {
-    testo = el.querySelector('#testo-post').value;
-    posts = testo.trim() ? analizzaPost(testo, a) : [];
-    if (testo.trim() && !posts.length) avvisa('Nel testo non ho trovato risultati di partite', 'errore');
-    vistaFacebook(el);
-    el.querySelector('#post').scrollIntoView({ behavior: 'smooth' });
+  el.querySelector('#incolla')?.addEventListener('click', async () => {
+    let letto = '';
+    try {
+      letto = await navigator.clipboard.readText();
+    } catch {
+      avvisa('Non riesco a leggere gli appunti: incolla il testo a mano', 'errore');
+      el.querySelector('details').open = true;
+      return;
+    }
+    if (!letto.trim()) return avvisa('Gli appunti sono vuoti: copia prima il testo del post', 'errore');
+    analizzaEImporta(el, letto);
   });
+  el.querySelector('#automatico').addEventListener('change', e => {
+    try {
+      localStorage.setItem(CHIAVE_AUTOMATICO, e.target.checked ? 'si' : 'no');
+    } catch {
+      // Preferenza non memorizzabile: vale solo per questa sessione.
+    }
+  });
+  el.querySelector('#analizza').addEventListener('click', () => analizzaEImporta(el, el.querySelector('#testo-post').value));
   el.querySelector('#svuota')?.addEventListener('click', () => {
     testo = '';
     posts = [];
@@ -182,6 +238,14 @@ function schedaPost(p, a) {
   const [classe, etichetta] = ESITI[p.esito];
   const titolo = [p.giornata ? `${p.giornata}ª giornata` : null, p.girone ? `Girone ${p.girone}` : p.gironeIntestazione ? `Girone ${p.gironeIntestazione}` : null]
     .filter(Boolean).join(' · ');
+  // Partita già salvata: basta una riga di riepilogo.
+  if (p.esito === 'uguale') {
+    return `
+      <section class="scheda post" data-post="${p.indice}">
+        <div class="meta">${esc(titolo || 'Partita')} <span class="etichetta ufficiale">Salvata</span></div>
+        <p style="margin:8px 0 0"><strong>${esc(nomeSquadra(a, p.casa))} ${p.gol.casa} – ${p.gol.ospite} ${esc(nomeSquadra(a, p.ospite))}</strong></p>
+      </section>`;
+  }
   if (p.riepilogo) {
     return `
       <section class="scheda post" data-post="${p.indice}">

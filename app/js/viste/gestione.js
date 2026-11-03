@@ -3,7 +3,7 @@ import * as stato from '../stato.js';
 import * as backup from '../backup.js';
 import { confrontaArchivi, migraArchivio, unisciArchivi, verificaArchivio } from '../archivio.js';
 import { avvisa, esc, formattaDataOra, puoCondividereFile, uid } from '../util.js';
-import { gironiCampionato, nomeSquadra, opzioniSquadre } from './comuni.js';
+import { gironiCampionato, nomeSquadra, opzioniSquadre, testata } from './comuni.js';
 
 // Backup letto da file e in attesa di conferma.
 let daImportare = null;
@@ -20,7 +20,7 @@ export async function vistaGestione(el) {
   const giocate = a ? a.partite.filter(p => p.gol).length : 0;
 
   el.innerHTML = `
-    <h1>Gestione</h1>
+    ${testata('Gestione', '#/altro')}
 
     <section class="scheda">
       <h2>Dati su questo dispositivo</h2>
@@ -32,8 +32,8 @@ export async function vistaGestione(el) {
           <dt>Ultimo backup</dt><dd>${esc(formattaDataOra(ultimo))}</dd>
           <dt>Archivio protetto</dt><dd>${persistente === true ? 'sì' : persistente === false ? 'no: il sistema potrebbe cancellarlo se lo spazio scarseggia' : 'non verificabile'}</dd>
         </dl>` : '<p>Nessun dato salvato.</p>'}
-      <p class="nota">I dati sono salvati solo in questo browser. Non si sincronizzano con altri dispositivi:
-      per spostarli usa il backup. Su iPhone, se elimini l'icona dalla schermata Home, i dati vengono cancellati.</p>
+      <p class="nota">Ogni modifica fatta da questo telefono viene pubblicata per tutti, e ogni versione resta salvata
+      nella cronologia della repository su GitHub. Il backup qui sotto serve per avere anche una copia in un file.</p>
     </section>
 
     <section class="scheda">
@@ -53,7 +53,7 @@ export async function vistaGestione(el) {
       <div class="azioni">
         <a class="bottone primario" href="#/facebook">Importa post Facebook</a>
         <a class="bottone secondario" href="#/calendario">Importa calendario</a>
-        <a class="bottone secondario" href="#/squadre">Squadre e nomi alternativi</a>
+        <a class="bottone secondario" href="#/alias">Squadre e nomi alternativi</a>
       </div>
     </section>
 

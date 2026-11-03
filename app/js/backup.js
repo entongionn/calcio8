@@ -1,10 +1,8 @@
-// Esportazione dell'archivio come file JSON e promemoria del backup.
+// Esportazione dell'archivio come file JSON.
 
 import * as db from './db.js';
 import * as stato from './stato.js';
 import { condividiFile, scaricaFile } from './util.js';
-
-const GIORNI_PROMEMORIA = 7;
 
 function nomeFile() {
   const d = new Date();
@@ -37,14 +35,4 @@ export async function ultimoBackup() {
   } catch {
     return null;
   }
-}
-
-/** Vero se ci sono modifiche non comprese nell'ultimo backup e il backup è vecchio (o mai fatto). */
-export async function serveBackup() {
-  const archivio = stato.corrente();
-  if (!archivio?.aggiornato) return false;
-  const ultimo = await ultimoBackup();
-  if (ultimo && ultimo >= archivio.aggiornato) return false;
-  if (!ultimo) return archivio.partite.some(p => p.gol) || archivio.penalita.length > 0;
-  return Date.now() - new Date(ultimo).getTime() > GIORNI_PROMEMORIA * 86400000;
 }

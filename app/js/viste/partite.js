@@ -1,7 +1,7 @@
 import * as stato from '../stato.js';
 import { idPartita, STATI_PARTITA, totaleGiornate } from '../archivio.js';
 import { avvisa, esc, formattaData, uid } from '../util.js';
-import { apriDialogo, gironiCampionato, nomeSquadra, opzioniSquadre, vistaBenvenuto } from './comuni.js';
+import { apriDialogo, gironiCampionato, nomeSquadra, opzioniSquadre, stemmaSquadra, testata, vistaBenvenuto } from './comuni.js';
 
 // Giornata da mostrare all'apertura: quella della prima partita ancora da giocare.
 function giornataCorrente(partite, giornate) {
@@ -35,17 +35,19 @@ export function vistaPartite(el, [giornataParam, filtro = 'tutti']) {
 
   const gironi = gironiCampionato(a);
   const campionato = a.partite.filter(p => p.competizione === 'campionato');
+  const admin = stato.isAmministratore();
   if (!campionato.length) {
     el.innerHTML = `
-      <h1>Partite</h1>
+      ${testata('Calendario')}
       <section class="scheda">
         <p>Non ci sono ancora partite.</p>
+        ${admin ? `
         <div class="azioni">
           <a class="bottone primario" href="#/calendario">Importa il calendario</a>
           <button class="secondario" id="nuova">Aggiungi una partita</button>
-        </div>
+        </div>` : ''}
       </section>`;
-    el.querySelector('#nuova').addEventListener('click', () => dialogoPartita(null, {}));
+    el.querySelector('#nuova')?.addEventListener('click', () => dialogoPartita(null, {}));
     return;
   }
 
@@ -75,8 +77,9 @@ export function vistaPartite(el, [giornataParam, filtro = 'tutti']) {
 
   const link = (giornata, f = filtro) => `#/partite/${giornata}/${f}`;
 
+  const contenitore = admin ? 'button' : 'div';
   el.innerHTML = `
-    <h1>Partite</h1>
+    ${testata('Calendario')}
     <div class="navigatore">
       <a class="bottone icona" href="${i > 0 ? link(giornate[i - 1]) : '#'}" ${i > 0 ? '' : 'aria-disabled="true"'} aria-label="Giornata precedente">‹</a>
       <select id="giornata" aria-label="Giornata">
@@ -96,35 +99,37 @@ export function vistaPartite(el, [giornataParam, filtro = 'tutti']) {
           const st = etichettaStato(p);
           return `
           <li>
-            <button class="partita" data-id="${esc(p.id)}">
+            <${contenitore} class="partita" data-id="${esc(p.id)}">
               <span class="meta">
                 ${esc(p.ora ?? '')}${p.campo ? ` · ${esc(p.campo)}` : ''}
-                <span class="etichetta girone">${esc(p.girone)}</span>
+                <span class="etichetta girone">Girone ${esc(p.girone)}</span>
                 ${p.recupero ? '<span class="etichetta">recupero</span>' : ''}
                 ${st ? `<span class="etichetta ${st[0]}">${st[1]}</span>` : ''}
               </span>
               <span class="squadre">
-                <span class="casa">${esc(nomeSquadra(a, p.casa))}</span>
+                <span class="lato">${stemmaSquadra(a, p.casa, 26)}<span>${esc(nomeSquadra(a, p.casa))}</span></span>
                 <span class="punteggio${p.gol ? '' : ' vuoto'}">${p.gol ? `${p.gol.casa} – ${p.gol.ospite}` : '–'}</span>
-                <span class="ospite">${esc(nomeSquadra(a, p.ospite))}</span>
+                <span class="lato ospite">${stemmaSquadra(a, p.ospite, 26)}<span>${esc(nomeSquadra(a, p.ospite))}</span></span>
               </span>
               ${p.eventi?.marcatori?.length ? `
                 <span class="marcatori-partita">
                   <span>${marcatoriDi(a, p, p.casa)}</span>
                   <span class="ospite">${marcatoriDi(a, p, p.ospite)}</span>
                 </span>` : ''}
-            </button>
+            </${contenitore}>
           </li>`;
         }).join('')}
       </ul>`).join('')}
 
     ${riposi.length ? `<p class="nota">${riposi.map(r => `${esc(r.girone.nome)}: riposa ${esc(nomeSquadra(a, r.squadra))}`).join(' · ')}</p>` : ''}
+    ${admin ? `
     <div class="azioni">
       <button class="secondario" id="nuova">Aggiungi una partita</button>
-    </div>`;
+    </div>` : ''}`;
 
   el.querySelector('#giornata').addEventListener('change', e => { location.hash = link(e.target.value); });
   el.querySelectorAll('a[aria-disabled="true"]').forEach(x => x.addEventListener('click', e => e.preventDefault()));
+  if (!admin) return;
   el.querySelectorAll('.partita').forEach(b => b.addEventListener('click', () => {
     dialogoPartita(a.partite.find(p => p.id === b.dataset.id));
   }));

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 80 432 400">
+  <defs>
+    <radialGradient id="luce" cx="0.36" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.7" stop-color="#e9e8f2"/>
+      <stop offset="1" stop-color="#b9b6cc"/>
+    </radialGradient>
+    <clipPath id="sfera"><circle cx="256" cy="226" r="124"/></clipPath>
+  </defs>
+  <path d="M76 316.0C170 396.0 340 384.0 448 244.0" fill="none" stroke="#1f9d55" stroke-width="26" stroke-linecap="round"/>
+  <path d="M76 342.0C170 422.0 340 410.0 448 270.0" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+  <path d="M76 368.0C170 448.0 340 436.0 448 296.0" fill="none" stroke="#e23b3b" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="256" cy="226" r="124" fill="url(#luce)"/>
+  <g clip-path="url(#sfera)">
+    <path d="M256.0 186.0L256.0 152.0M294.0 213.6L326.4 203.1M279.5 258.4L299.5 285.9M232.5 258.4L212.5 285.9M218.0 213.6L185.6 203.1" stroke="#1b1726" stroke-width="7" stroke-linecap="round"/>
+    <polygon points="256.0,186.0 294.0,213.6 279.5,258.4 232.5,258.4 218.0,213.6" fill="#1b1726"/>
+    <polygon points="256.0,152.0 219.9,125.7 233.7,83.3 278.3,83.3 292.1,125.7" fill="#1b1726"/>
+    <polygon points="326.4,203.1 340.2,160.6 384.9,160.6 398.7,203.1 362.5,229.4" fill="#1b1726"/>
+    <polygon points="299.5,285.9 344.2,285.9 358.0,328.4 321.8,354.6 285.7,328.4" fill="#1b1726"/>
+    <polygon points="212.5,285.9 226.3,328.4 190.2,354.6 154.0,328.4 167.8,285.9" fill="#1b1726"/>
+    <polygon points="185.6,203.1 149.5,229.4 113.3,203.1 127.1,160.6 171.8,160.6" fill="#1b1726"/>
+  </g>
+  <circle cx="256" cy="226" r="124" fill="none" stroke="#1b1726" stroke-opacity="0.25" stroke-width="3"/>
+</svg>

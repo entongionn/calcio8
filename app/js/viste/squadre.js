@@ -1,15 +1,14 @@
 import * as stato from '../stato.js';
 import { chiave } from '../normalizza.js';
 import { avvisa, esc } from '../util.js';
-import { gironiCampionato, vistaBenvenuto } from './comuni.js';
+import { gironiCampionato, testata, vistaBenvenuto } from './comuni.js';
 
 export function vistaSquadre(el) {
   const a = stato.corrente();
   if (!a) return vistaBenvenuto(el);
 
   el.innerHTML = `
-    <p class="briciole"><a href="#/gestione">Gestione</a> ›</p>
-    <h1>Squadre</h1>
+    ${testata('Nomi alternativi', '#/gestione')}
     <p class="nota">I nomi alternativi servono a riconoscere la squadra quando i comunicati o i post la scrivono in modo diverso.
     I refusi più comuni vengono già riconosciuti da soli.</p>
     ${gironiCampionato(a).map(g => `

@@ -1,0 +1,2219 @@
+{
+ "formato": "aics-calcio8",
+ "versioneSchema": 2,
+ "aggiornato": "2026-11-03T13:11:46.444Z",
+ "stagione": {
+  "id": "2026-27",
+  "nome": "Stagione 2026–2027 · Calcio a 8"
+ },
+ "campi": [
+  "Petriccio",
+  "San Miniato",
+  "Monteroni"
+ ],
+ "squadre": [
+  {
+   "id": "sporting-uopini",
+   "nome": "Sporting Uopini",
+   "alias": []
+  },
+  {
+   "id": "castellina-in-chianti",
+   "nome": "Castellina in Chianti",
+   "alias": []
+  },
+  {
+   "id": "sant-andrea",
+   "nome": "Sant'Andrea",
+   "alias": [
+    "S. Andrea",
+    "S.Andrea"
+   ]
+  },
+  {
+   "id": "terre-di-siena",
+   "nome": "Terre di Siena",
+   "alias": []
+  },
+  {
+   "id": "i-briganti",
+   "nome": "I Briganti",
+   "alias": []
+  },
+  {
+   "id": "old-boys",
+   "nome": "Old Boys",
+   "alias": []
+  },
+  {
+   "id": "agriarte",
+   "nome": "Agriarte",
+   "alias": []
+  },
+  {
+   "id": "avis-asta-taverne",
+   "nome": "Avis Asta Taverne",
+   "alias": [
+    "Avis"
+   ]
+  },
+  {
+   "id": "monteroni",
+   "nome": "Monteroni",
+   "alias": []
+  },
+  {
+   "id": "borussia-robur",
+   "nome": "Borussia Robur",
+   "alias": []
+  },
+  {
+   "id": "artico-senese",
+   "nome": "Artico Senese",
+   "alias": []
+  },
+  {
+   "id": "lornano",
+   "nome": "Lornano",
+   "alias": []
+  },
+  {
+   "id": "sienna-united-agrivigna",
+   "nome": "Sienna United Agrivigna",
+   "alias": [
+    "Sienna United"
+   ]
+  },
+  {
+   "id": "atletico-menta",
+   "nome": "Atletico Menta",
+   "alias": []
+  },
+  {
+   "id": "ponte-d-arbia",
+   "nome": "Ponte d'Arbia",
+   "alias": []
+  },
+  {
+   "id": "vico-alto",
+   "nome": "Vico Alto",
+   "alias": []
+  },
+  {
+   "id": "road-to-murlo",
+   "nome": "Road to Murlo",
+   "alias": []
+  },
+  {
+   "id": "warriors",
+   "nome": "Warriors",
+   "alias": [
+    "Warrior"
+   ]
+  },
+  {
+   "id": "sienterina",
+   "nome": "Sienterina",
+   "alias": []
+  }
+ ],
+ "competizioni": [
+  {
+   "id": "campionato",
+   "nome": "Campionato provinciale"
+  },
+  {
+   "id": "coppa",
+   "nome": "Coppa AICS"
+  }
+ ],
+ "gironi": [
+  {
+   "id": "A",
+   "competizione": "campionato",
+   "fase": "fase1",
+   "nome": "Girone A",
+   "formula": "andata-ritorno",
+   "squadre": [
+    "sporting-uopini",
+    "castellina-in-chianti",
+    "sant-andrea",
+    "terre-di-siena",
+    "i-briganti",
+    "old-boys",
+    "agriarte"
+   ]
+  },
+  {
+   "id": "B",
+   "competizione": "campionato",
+   "fase": "fase1",
+   "nome": "Girone B",
+   "formula": "andata-ritorno",
+   "squadre": [
+    "avis-asta-taverne",
+    "monteroni",
+    "borussia-robur",
+    "artico-senese",
+    "lornano",
+    "sienna-united-agrivigna"
+   ]
+  },
+  {
+   "id": "C",
+   "competizione": "campionato",
+   "fase": "fase1",
+   "nome": "Girone C",
+   "formula": "andata-ritorno",
+   "squadre": [
+    "atletico-menta",
+    "ponte-d-arbia",
+    "vico-alto",
+    "road-to-murlo",
+    "warriors",
+    "sienterina"
+   ]
+  },
+  {
+   "id": "coppa-1",
+   "competizione": "coppa",
+   "fase": "gironi",
+   "nome": "Girone 1",
+   "formula": "andata",
+   "squadre": [
+    "avis-asta-taverne",
+    "warriors",
+    "old-boys"
+   ]
+  },
+  {
+   "id": "coppa-2",
+   "competizione": "coppa",
+   "fase": "gironi",
+   "nome": "Girone 2",
+   "formula": "andata",
+   "squadre": [
+    "agriarte",
+    "terre-di-siena",
+    "borussia-robur",
+    "sant-andrea"
+   ]
+  },
+  {
+   "id": "coppa-3",
+   "competizione": "coppa",
+   "fase": "gironi",
+   "nome": "Girone 3",
+   "formula": "andata",
+   "squadre": [
+    "i-briganti",
+    "sporting-uopini",
+    "lornano"
+   ]
+  },
+  {
+   "id": "coppa-4",
+   "competizione": "coppa",
+   "fase": "gironi",
+   "nome": "Girone 4",
+   "formula": "andata",
+   "squadre": [
+    "castellina-in-chianti",
+    "artico-senese",
+    "vico-alto"
+   ]
+  },
+  {
+   "id": "coppa-5",
+   "competizione": "coppa",
+   "fase": "gironi",
+   "nome": "Girone 5",
+   "formula": "andata",
+   "squadre": [
+    "atletico-menta",
+    "road-to-murlo",
+    "ponte-d-arbia"
+   ]
+  },
+  {
+   "id": "coppa-6",
+   "competizione": "coppa",
+   "fase": "gironi",
+   "nome": "Girone 6",
+   "formula": "andata",
+   "squadre": [
+    "sienterina",
+    "monteroni",
+    "sienna-united-agrivigna"
+   ]
+  }
+ ],
+ "partite": [
+  {
+   "id": "A:sporting-uopini:castellina-in-chianti",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sporting-uopini",
+   "ospite": "castellina-in-chianti",
+   "data": "2026-10-26",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 5,
+    "ospite": 1
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": null,
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "sporting-uopini:suffia-davide",
+      "squadra": "sporting-uopini",
+      "gol": 1
+     },
+     {
+      "giocatore": "sporting-uopini:pruneti-valerio",
+      "squadra": "sporting-uopini",
+      "gol": 1
+     },
+     {
+      "giocatore": "sporting-uopini:vigni-davide",
+      "squadra": "sporting-uopini",
+      "gol": 1
+     },
+     {
+      "giocatore": "sporting-uopini:panichi-giovanni",
+      "squadra": "sporting-uopini",
+      "gol": 1
+     },
+     {
+      "giocatore": "sporting-uopini:ruggiero-giuseppe",
+      "squadra": "sporting-uopini",
+      "gol": 1
+     },
+     {
+      "giocatore": "castellina-in-chianti:carlino-filippo",
+      "squadra": "castellina-in-chianti",
+      "gol": 1
+     }
+    ],
+    "ammoniti": [
+     {
+      "giocatore": "sporting-uopini:panichi-giovanni",
+      "nome": "Panichi Giovanni",
+      "squadra": "sporting-uopini"
+     },
+     {
+      "giocatore": "castellina-in-chianti:bettuelli-pietro",
+      "nome": "Bettuelli Pietro",
+      "squadra": "castellina-in-chianti"
+     },
+     {
+      "giocatore": "castellina-in-chianti:rauggio-francesco",
+      "nome": "Rauggio Francesco",
+      "squadra": "castellina-in-chianti"
+     }
+    ],
+    "espulsi": [],
+    "nonAttribuiti": {
+     "casa": 0,
+     "ospite": 0
+    }
+   }
+  },
+  {
+   "id": "C:road-to-murlo:atletico-menta",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "road-to-murlo",
+   "ospite": "atletico-menta",
+   "data": "2026-10-26",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 2,
+    "ospite": 4
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": null,
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "road-to-murlo:arrigucci-matteo",
+      "squadra": "road-to-murlo",
+      "gol": 1
+     },
+     {
+      "giocatore": "road-to-murlo:el-ammouri-yonness",
+      "squadra": "road-to-murlo",
+      "gol": 1
+     },
+     {
+      "giocatore": "atletico-menta:garofano-giovanni",
+      "squadra": "atletico-menta",
+      "gol": 2
+     },
+     {
+      "giocatore": "atletico-menta:mongiovi-giacomo",
+      "squadra": "atletico-menta",
+      "gol": 1
+     },
+     {
+      "giocatore": "atletico-menta:aranibar-menacho-joaquin-alonso",
+      "squadra": "atletico-menta",
+      "gol": 1
+     }
+    ],
+    "ammoniti": [
+     {
+      "giocatore": "atletico-menta:rossini-rito",
+      "nome": "Rossini Rito",
+      "squadra": "atletico-menta"
+     },
+     {
+      "giocatore": "atletico-menta:garofano-giovanni",
+      "nome": "Garofano Giovanni",
+      "squadra": "atletico-menta"
+     }
+    ],
+    "espulsi": [],
+    "nonAttribuiti": {
+     "casa": 0,
+     "ospite": 0
+    }
+   }
+  },
+  {
+   "id": "C:vico-alto:sienterina",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "vico-alto",
+   "ospite": "sienterina",
+   "data": "2026-10-27",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 2,
+    "ospite": 2
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": null,
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "vico-alto:cella-menta",
+      "squadra": "vico-alto",
+      "gol": 1
+     },
+     {
+      "giocatore": "vico-alto:papini-cesare",
+      "squadra": "vico-alto",
+      "gol": 1
+     },
+     {
+      "giocatore": "sienterina:barcelli-alessio",
+      "squadra": "sienterina",
+      "gol": 1
+     },
+     {
+      "giocatore": "sienterina:camara-omar",
+      "squadra": "sienterina",
+      "gol": 1
+     }
+    ],
+    "ammoniti": [
+     {
+      "giocatore": "vico-alto:nestore-matias",
+      "nome": "Nestore Matias",
+      "squadra": "vico-alto"
+     },
+     {
+      "giocatore": "vico-alto:bruni-andrea",
+      "nome": "Bruni Andrea",
+      "squadra": "vico-alto"
+     }
+    ],
+    "espulsi": [],
+    "nonAttribuiti": {
+     "casa": 0,
+     "ospite": 0
+    }
+   }
+  },
+  {
+   "id": "A:old-boys:i-briganti",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "old-boys",
+   "ospite": "i-briganti",
+   "data": "2026-10-27",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 0,
+    "ospite": 2
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": null,
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "i-briganti:silvestrini-danilo",
+      "squadra": "i-briganti",
+      "gol": 1
+     },
+     {
+      "giocatore": "i-briganti:ursini-gianmarco",
+      "squadra": "i-briganti",
+      "gol": 1
+     }
+    ],
+    "ammoniti": [
+     {
+      "giocatore": "old-boys:pallassini-emanuele",
+      "nome": "Pallassini Emanuele",
+      "squadra": "old-boys"
+     }
+    ],
+    "espulsi": [],
+    "nonAttribuiti": {
+     "casa": 0,
+     "ospite": 0
+    }
+   }
+  },
+  {
+   "id": "A:terre-di-siena:agriarte",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "terre-di-siena",
+   "ospite": "agriarte",
+   "data": "2026-10-28",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 7,
+    "ospite": 1
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": null,
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "terre-di-siena:schillaci-davide",
+      "squadra": "terre-di-siena",
+      "gol": 2
+     },
+     {
+      "giocatore": "terre-di-siena:stohniienko-vlacheslav",
+      "squadra": "terre-di-siena",
+      "gol": 2
+     },
+     {
+      "giocatore": "terre-di-siena:koffi-joel",
+      "squadra": "terre-di-siena",
+      "gol": 2
+     },
+     {
+      "giocatore": "terre-di-siena:marsalona-michael",
+      "squadra": "terre-di-siena",
+      "gol": 2
+     },
+     {
+      "giocatore": "agriarte:hasanaj-edvin",
+      "squadra": "agriarte",
+      "gol": 1
+     }
+    ],
+    "ammoniti": [],
+    "espulsi": [],
+    "nonAttribuiti": {
+     "casa": 0,
+     "ospite": 0
+    }
+   }
+  },
+  {
+   "id": "C:ponte-d-arbia:warriors",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "ponte-d-arbia",
+   "ospite": "warriors",
+   "data": "2026-10-28",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 5,
+    "ospite": 0
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": null,
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "ponte-d-arbia:tramacere-guido",
+      "squadra": "ponte-d-arbia",
+      "gol": 2
+     },
+     {
+      "giocatore": "ponte-d-arbia:vera-luigi",
+      "squadra": "ponte-d-arbia",
+      "gol": 1
+     },
+     {
+      "giocatore": "ponte-d-arbia:zefiro-vincenzo",
+      "squadra": "ponte-d-arbia",
+      "gol": 1
+     }
+    ],
+    "ammoniti": [
+     {
+      "giocatore": "warriors:accupato-paolo",
+      "nome": "Accupato Paolo",
+      "squadra": "warriors"
+     },
+     {
+      "giocatore": "warriors:leone-roberto",
+      "nome": "Leone Roberto",
+      "squadra": "warriors"
+     }
+    ],
+    "espulsi": [
+     {
+      "giocatore": "ponte-d-arbia:anselimi-giulio",
+      "nome": "Anselimi Giulio",
+      "squadra": "ponte-d-arbia",
+      "ruolo": "dirigente",
+      "giornate": 1
+     }
+    ],
+    "nonAttribuiti": {
+     "casa": 1,
+     "ospite": 0
+    }
+   }
+  },
+  {
+   "id": "B:borussia-robur:sienna-united-agrivigna",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "borussia-robur",
+   "ospite": "sienna-united-agrivigna",
+   "data": "2026-10-29",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 1,
+    "ospite": 9
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": null,
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "borussia-robur:pasquetti-leonardo",
+      "squadra": "borussia-robur",
+      "gol": 1
+     },
+     {
+      "giocatore": "sienna-united-agrivigna:hodza-heldin",
+      "squadra": "sienna-united-agrivigna",
+      "gol": 3
+     },
+     {
+      "giocatore": "sienna-united-agrivigna:diana-giuseppe",
+      "squadra": "sienna-united-agrivigna",
+      "gol": 2
+     },
+     {
+      "giocatore": "sienna-united-agrivigna:spada-alessandro",
+      "squadra": "sienna-united-agrivigna",
+      "gol": 1
+     }
+    ],
+    "ammoniti": [],
+    "espulsi": [],
+    "nonAttribuiti": {
+     "casa": 0,
+     "ospite": 3
+    }
+   }
+  },
+  {
+   "id": "B:artico-senese:avis-asta-taverne",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "artico-senese",
+   "ospite": "avis-asta-taverne",
+   "data": "2026-10-29",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 3,
+    "ospite": 2
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": "Vigni Filippo",
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "artico-senese:mazzoni-massimo",
+      "squadra": "artico-senese",
+      "gol": 1
+     },
+     {
+      "giocatore": "artico-senese:bindi-niccolo",
+      "squadra": "artico-senese",
+      "gol": 1
+     },
+     {
+      "giocatore": "artico-senese:cherici-lorenzo",
+      "squadra": "artico-senese",
+      "gol": 1
+     },
+     {
+      "giocatore": "avis-asta-taverne:abbate-giuseppe",
+      "squadra": "avis-asta-taverne",
+      "gol": 2
+     }
+    ],
+    "ammoniti": [
+     {
+      "giocatore": "artico-senese:gigli-lorenzo",
+      "nome": "Gigli Lorenzo",
+      "squadra": "artico-senese"
+     },
+     {
+      "giocatore": "avis-asta-taverne:natale-pasquale",
+      "nome": "Natale Pasquale",
+      "squadra": "avis-asta-taverne"
+     }
+    ],
+    "espulsi": [
+     {
+      "giocatore": "artico-senese:cherici-alessandro",
+      "nome": "Cherici Alessandro",
+      "squadra": "artico-senese",
+      "ruolo": "dirigente",
+      "giornate": 1
+     }
+    ],
+    "nonAttribuiti": {
+     "casa": 0,
+     "ospite": 0
+    }
+   }
+  },
+  {
+   "id": "B:lornano:monteroni",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 1,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "lornano",
+   "ospite": "monteroni",
+   "data": "2026-10-30",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "giocata",
+   "gol": {
+    "casa": 1,
+    "ospite": 0
+   },
+   "ufficiale": true,
+   "fonte": "cuf",
+   "arbitro": "Lorenzini Simone",
+   "eventi": {
+    "marcatori": [
+     {
+      "giocatore": "lornano:zapata-garces-cesar-augusto",
+      "squadra": "lornano",
+      "gol": 1
+     }
+    ],
+    "ammoniti": [
+     {
+      "giocatore": "lornano:marruganti-mattia",
+      "nome": "Marruganti Mattia",
+      "squadra": "lornano"
+     },
+     {
+      "giocatore": "monteroni:caushi-giulio",
+      "nome": "Caushi Giulio",
+      "squadra": "monteroni"
+     }
+    ],
+    "espulsi": [],
+    "nonAttribuiti": {
+     "casa": 0,
+     "ospite": 0
+    }
+   }
+  },
+  {
+   "id": "C:warriors:road-to-murlo",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "warriors",
+   "ospite": "road-to-murlo",
+   "data": "2026-11-02",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:i-briganti:terre-di-siena",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "i-briganti",
+   "ospite": "terre-di-siena",
+   "data": "2026-11-02",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:sienna-united-agrivigna:monteroni",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sienna-united-agrivigna",
+   "ospite": "monteroni",
+   "data": "2026-11-02",
+   "ora": "21:40",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:castellina-in-chianti:old-boys",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "castellina-in-chianti",
+   "ospite": "old-boys",
+   "data": "2026-11-03",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:agriarte:sant-andrea",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "agriarte",
+   "ospite": "sant-andrea",
+   "data": "2026-11-03",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:atletico-menta:vico-alto",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "atletico-menta",
+   "ospite": "vico-alto",
+   "data": "2026-11-05",
+   "ora": "21:00",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:avis-asta-taverne:borussia-robur",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "avis-asta-taverne",
+   "ospite": "borussia-robur",
+   "data": "2026-11-06",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:sienterina:ponte-d-arbia",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sienterina",
+   "ospite": "ponte-d-arbia",
+   "data": "2026-11-06",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:lornano:artico-senese",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 2,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "lornano",
+   "ospite": "artico-senese",
+   "data": "2026-11-06",
+   "ora": "20:30",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:vico-alto:road-to-murlo",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "vico-alto",
+   "ospite": "road-to-murlo",
+   "data": "2026-11-09",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:sant-andrea:i-briganti",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sant-andrea",
+   "ospite": "i-briganti",
+   "data": "2026-11-09",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:old-boys:sporting-uopini",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "old-boys",
+   "ospite": "sporting-uopini",
+   "data": "2026-11-09",
+   "ora": "21:40",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:monteroni:avis-asta-taverne",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "monteroni",
+   "ospite": "avis-asta-taverne",
+   "data": "2026-11-09",
+   "ora": "21:15",
+   "campo": "Monteroni",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:terre-di-siena:castellina-in-chianti",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "terre-di-siena",
+   "ospite": "castellina-in-chianti",
+   "data": "2026-11-10",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:ponte-d-arbia:atletico-menta",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "ponte-d-arbia",
+   "ospite": "atletico-menta",
+   "data": "2026-11-11",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:borussia-robur:artico-senese",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "borussia-robur",
+   "ospite": "artico-senese",
+   "data": "2026-11-12",
+   "ora": "21:00",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:sienna-united-agrivigna:lornano",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sienna-united-agrivigna",
+   "ospite": "lornano",
+   "data": "2026-11-13",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:sienterina:warriors",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 3,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sienterina",
+   "ospite": "warriors",
+   "data": "2026-11-13",
+   "ora": "20:30",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:sporting-uopini:terre-di-siena",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sporting-uopini",
+   "ospite": "terre-di-siena",
+   "data": "2026-11-16",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:artico-senese:monteroni",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "artico-senese",
+   "ospite": "monteroni",
+   "data": "2026-11-16",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:borussia-robur:lornano",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "borussia-robur",
+   "ospite": "lornano",
+   "data": "2026-11-16",
+   "ora": "21:40",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:road-to-murlo:ponte-d-arbia",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "road-to-murlo",
+   "ospite": "ponte-d-arbia",
+   "data": "2026-11-16",
+   "ora": "21:15",
+   "campo": "Monteroni",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:atletico-menta:sienterina",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "atletico-menta",
+   "ospite": "sienterina",
+   "data": "2026-11-17",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:vico-alto:warriors",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "vico-alto",
+   "ospite": "warriors",
+   "data": "2026-11-17",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:castellina-in-chianti:sant-andrea",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "castellina-in-chianti",
+   "ospite": "sant-andrea",
+   "data": "2026-11-19",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:avis-asta-taverne:sienna-united-agrivigna",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "avis-asta-taverne",
+   "ospite": "sienna-united-agrivigna",
+   "data": "2026-11-20",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:i-briganti:agriarte",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 4,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "i-briganti",
+   "ospite": "agriarte",
+   "data": "2026-11-20",
+   "ora": "20:30",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:warriors:atletico-menta",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "warriors",
+   "ospite": "atletico-menta",
+   "data": "2026-11-23",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:sant-andrea:sporting-uopini",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sant-andrea",
+   "ospite": "sporting-uopini",
+   "data": "2026-11-23",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:terre-di-siena:old-boys",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "terre-di-siena",
+   "ospite": "old-boys",
+   "data": "2026-11-23",
+   "ora": "21:40",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:monteroni:borussia-robur",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "monteroni",
+   "ospite": "borussia-robur",
+   "data": "2026-11-23",
+   "ora": "21:15",
+   "campo": "Monteroni",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:sienna-united-agrivigna:artico-senese",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sienna-united-agrivigna",
+   "ospite": "artico-senese",
+   "data": "2026-11-24",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:sienterina:road-to-murlo",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sienterina",
+   "ospite": "road-to-murlo",
+   "data": "2026-11-24",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:ponte-d-arbia:vico-alto",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "ponte-d-arbia",
+   "ospite": "vico-alto",
+   "data": "2026-11-25",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:lornano:avis-asta-taverne",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "lornano",
+   "ospite": "avis-asta-taverne",
+   "data": "2026-11-27",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:agriarte:castellina-in-chianti",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 5,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "agriarte",
+   "ospite": "castellina-in-chianti",
+   "data": "2026-11-27",
+   "ora": "20:30",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:warriors:ponte-d-arbia",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "warriors",
+   "ospite": "ponte-d-arbia",
+   "data": "2026-11-30",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:sienna-united-agrivigna:borussia-robur",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sienna-united-agrivigna",
+   "ospite": "borussia-robur",
+   "data": "2026-11-30",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:atletico-menta:road-to-murlo",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "atletico-menta",
+   "ospite": "road-to-murlo",
+   "data": "2026-11-30",
+   "ora": "21:40",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:monteroni:lornano",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "monteroni",
+   "ospite": "lornano",
+   "data": "2026-11-30",
+   "ora": "21:15",
+   "campo": "Monteroni",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:sporting-uopini:agriarte",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sporting-uopini",
+   "ospite": "agriarte",
+   "data": "2026-12-01",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:castellina-in-chianti:i-briganti",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "castellina-in-chianti",
+   "ospite": "i-briganti",
+   "data": "2026-12-01",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:old-boys:sant-andrea",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "old-boys",
+   "ospite": "sant-andrea",
+   "data": "2026-12-02",
+   "ora": "21:00",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:sienterina:vico-alto",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sienterina",
+   "ospite": "vico-alto",
+   "data": "2026-12-04",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:avis-asta-taverne:artico-senese",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 6,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "avis-asta-taverne",
+   "ospite": "artico-senese",
+   "data": "2026-12-04",
+   "ora": "20:30",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:i-briganti:sporting-uopini",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 7,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "i-briganti",
+   "ospite": "sporting-uopini",
+   "data": "2026-12-07",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:sant-andrea:terre-di-siena",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 7,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sant-andrea",
+   "ospite": "terre-di-siena",
+   "data": "2026-12-07",
+   "ora": "21:40",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:monteroni:sienna-united-agrivigna",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 7,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "monteroni",
+   "ospite": "sienna-united-agrivigna",
+   "data": "2026-12-07",
+   "ora": "21:15",
+   "campo": "Monteroni",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:borussia-robur:avis-asta-taverne",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 7,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "borussia-robur",
+   "ospite": "avis-asta-taverne",
+   "data": "2026-12-09",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:ponte-d-arbia:sienterina",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 7,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "ponte-d-arbia",
+   "ospite": "sienterina",
+   "data": "2026-12-09",
+   "ora": "21:00",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:vico-alto:atletico-menta",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 7,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "vico-alto",
+   "ospite": "atletico-menta",
+   "data": "2026-12-10",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:agriarte:old-boys",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 7,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "agriarte",
+   "ospite": "old-boys",
+   "data": "2026-12-11",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:artico-senese:lornano",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 7,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "artico-senese",
+   "ospite": "lornano",
+   "data": "2026-12-11",
+   "ora": "20:30",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:artico-senese:borussia-robur",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "artico-senese",
+   "ospite": "borussia-robur",
+   "data": "2026-12-14",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:atletico-menta:ponte-d-arbia",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "atletico-menta",
+   "ospite": "ponte-d-arbia",
+   "data": "2026-12-14",
+   "ora": "21:40",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:road-to-murlo:vico-alto",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "road-to-murlo",
+   "ospite": "vico-alto",
+   "data": "2026-12-14",
+   "ora": "21:15",
+   "campo": "Monteroni",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:warriors:sienterina",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "warriors",
+   "ospite": "sienterina",
+   "data": "2026-12-15",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:agriarte:terre-di-siena",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "agriarte",
+   "ospite": "terre-di-siena",
+   "data": "2026-12-15",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:avis-asta-taverne:monteroni",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "avis-asta-taverne",
+   "ospite": "monteroni",
+   "data": "2026-12-16",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:castellina-in-chianti:sporting-uopini",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "castellina-in-chianti",
+   "ospite": "sporting-uopini",
+   "data": "2026-12-17",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "B:lornano:sienna-united-agrivigna",
+   "competizione": "campionato",
+   "girone": "B",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "lornano",
+   "ospite": "sienna-united-agrivigna",
+   "data": "2026-12-04",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:i-briganti:old-boys",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 8,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "i-briganti",
+   "ospite": "old-boys",
+   "data": "2026-12-04",
+   "ora": "20:30",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:sant-andrea:agriarte",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 9,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "sant-andrea",
+   "ospite": "agriarte",
+   "data": "2026-12-21",
+   "ora": "20:30",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:old-boys:castellina-in-chianti",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 9,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "old-boys",
+   "ospite": "castellina-in-chianti",
+   "data": "2026-12-21",
+   "ora": "21:40",
+   "campo": "Petriccio",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "A:terre-di-siena:i-briganti",
+   "competizione": "campionato",
+   "girone": "A",
+   "giornata": 9,
+   "giornataCorretta": false,
+   "recupero": false,
+   "casa": "terre-di-siena",
+   "ospite": "i-briganti",
+   "data": "2026-12-21",
+   "ora": "21:40",
+   "campo": "San Miniato",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  },
+  {
+   "id": "C:road-to-murlo:warriors",
+   "competizione": "campionato",
+   "girone": "C",
+   "giornata": 7,
+   "giornataCorretta": true,
+   "recupero": true,
+   "casa": "road-to-murlo",
+   "ospite": "warriors",
+   "data": "2026-12-21",
+   "ora": "21:15",
+   "campo": "Monteroni",
+   "stato": "programmata",
+   "gol": null,
+   "ufficiale": false,
+   "fonte": null
+  }
+ ],
+ "penalita": [],
+ "giocatori": [
+  {
+   "id": "sporting-uopini:suffia-davide",
+   "nome": "Suffia Davide",
+   "squadra": "sporting-uopini",
+   "alias": []
+  },
+  {
+   "id": "sporting-uopini:pruneti-valerio",
+   "nome": "Pruneti Valerio",
+   "squadra": "sporting-uopini",
+   "alias": []
+  },
+  {
+   "id": "sporting-uopini:vigni-davide",
+   "nome": "Vigni Davide",
+   "squadra": "sporting-uopini",
+   "alias": []
+  },
+  {
+   "id": "sporting-uopini:panichi-giovanni",
+   "nome": "Panichi Giovanni",
+   "squadra": "sporting-uopini",
+   "alias": []
+  },
+  {
+   "id": "sporting-uopini:ruggiero-giuseppe",
+   "nome": "Ruggiero Giuseppe",
+   "squadra": "sporting-uopini",
+   "alias": []
+  },
+  {
+   "id": "castellina-in-chianti:carlino-filippo",
+   "nome": "Carlino Filippo",
+   "squadra": "castellina-in-chianti",
+   "alias": []
+  },
+  {
+   "id": "castellina-in-chianti:bettuelli-pietro",
+   "nome": "Bettuelli Pietro",
+   "squadra": "castellina-in-chianti",
+   "alias": []
+  },
+  {
+   "id": "castellina-in-chianti:rauggio-francesco",
+   "nome": "Rauggio Francesco",
+   "squadra": "castellina-in-chianti",
+   "alias": []
+  },
+  {
+   "id": "i-briganti:silvestrini-danilo",
+   "nome": "Silvestrini Danilo",
+   "squadra": "i-briganti",
+   "alias": []
+  },
+  {
+   "id": "i-briganti:ursini-gianmarco",
+   "nome": "Ursini Gianmarco",
+   "squadra": "i-briganti",
+   "alias": []
+  },
+  {
+   "id": "old-boys:pallassini-emanuele",
+   "nome": "Pallassini Emanuele",
+   "squadra": "old-boys",
+   "alias": []
+  },
+  {
+   "id": "terre-di-siena:schillaci-davide",
+   "nome": "Schillaci Davide",
+   "squadra": "terre-di-siena",
+   "alias": []
+  },
+  {
+   "id": "terre-di-siena:stohniienko-vlacheslav",
+   "nome": "Stohniienko Vlacheslav",
+   "squadra": "terre-di-siena",
+   "alias": []
+  },
+  {
+   "id": "terre-di-siena:koffi-joel",
+   "nome": "Koffi Joel",
+   "squadra": "terre-di-siena",
+   "alias": []
+  },
+  {
+   "id": "terre-di-siena:marsalona-michael",
+   "nome": "Marsalona Michael",
+   "squadra": "terre-di-siena",
+   "alias": []
+  },
+  {
+   "id": "agriarte:hasanaj-edvin",
+   "nome": "Hasanaj Edvin",
+   "squadra": "agriarte",
+   "alias": []
+  },
+  {
+   "id": "borussia-robur:pasquetti-leonardo",
+   "nome": "Pasquetti Leonardo",
+   "squadra": "borussia-robur",
+   "alias": []
+  },
+  {
+   "id": "sienna-united-agrivigna:hodza-heldin",
+   "nome": "Hodza Heldin",
+   "squadra": "sienna-united-agrivigna",
+   "alias": [
+    "Hodza Meldin"
+   ]
+  },
+  {
+   "id": "sienna-united-agrivigna:diana-giuseppe",
+   "nome": "Diana Giuseppe",
+   "squadra": "sienna-united-agrivigna",
+   "alias": []
+  },
+  {
+   "id": "sienna-united-agrivigna:spada-alessandro",
+   "nome": "Spada Alessandro",
+   "squadra": "sienna-united-agrivigna",
+   "alias": []
+  },
+  {
+   "id": "artico-senese:mazzoni-massimo",
+   "nome": "Mazzoni Massimo",
+   "squadra": "artico-senese",
+   "alias": []
+  },
+  {
+   "id": "artico-senese:bindi-niccolo",
+   "nome": "Bindi Niccolò",
+   "squadra": "artico-senese",
+   "alias": []
+  },
+  {
+   "id": "artico-senese:cherici-lorenzo",
+   "nome": "Cherici Lorenzo",
+   "squadra": "artico-senese",
+   "alias": [
+    "Chierici Lorenzo"
+   ]
+  },
+  {
+   "id": "avis-asta-taverne:abbate-giuseppe",
+   "nome": "Abbate Giuseppe",
+   "squadra": "avis-asta-taverne",
+   "alias": []
+  },
+  {
+   "id": "artico-senese:gigli-lorenzo",
+   "nome": "Gigli Lorenzo",
+   "squadra": "artico-senese",
+   "alias": []
+  },
+  {
+   "id": "avis-asta-taverne:natale-pasquale",
+   "nome": "Natale Pasquale",
+   "squadra": "avis-asta-taverne",
+   "alias": []
+  },
+  {
+   "id": "artico-senese:cherici-alessandro",
+   "nome": "Cherici Alessandro",
+   "squadra": "artico-senese",
+   "alias": [
+    "Chierici Alessandro"
+   ]
+  },
+  {
+   "id": "lornano:zapata-garces-cesar-augusto",
+   "nome": "Zapata Garces Cesar Augusto",
+   "squadra": "lornano",
+   "alias": [
+    "Zapata Garces Cesar"
+   ]
+  },
+  {
+   "id": "lornano:marruganti-mattia",
+   "nome": "Marruganti Mattia",
+   "squadra": "lornano",
+   "alias": [
+    "Marruganrti Mattia"
+   ]
+  },
+  {
+   "id": "monteroni:caushi-giulio",
+   "nome": "Caushi Giulio",
+   "squadra": "monteroni",
+   "alias": []
+  },
+  {
+   "id": "road-to-murlo:arrigucci-matteo",
+   "nome": "Arrigucci Matteo",
+   "squadra": "road-to-murlo",
+   "alias": []
+  },
+  {
+   "id": "road-to-murlo:el-ammouri-yonness",
+   "nome": "El Ammouri Yonness",
+   "squadra": "road-to-murlo",
+   "alias": []
+  },
+  {
+   "id": "atletico-menta:garofano-giovanni",
+   "nome": "Garofano Giovanni",
+   "squadra": "atletico-menta",
+   "alias": []
+  },
+  {
+   "id": "atletico-menta:mongiovi-giacomo",
+   "nome": "Mongiovì Giacomo",
+   "squadra": "atletico-menta",
+   "alias": []
+  },
+  {
+   "id": "atletico-menta:aranibar-menacho-joaquin-alonso",
+   "nome": "Aranibar Menacho Joaquin Alonso",
+   "squadra": "atletico-menta",
+   "alias": []
+  },
+  {
+   "id": "atletico-menta:rossini-rito",
+   "nome": "Rossini Rito",
+   "squadra": "atletico-menta",
+   "alias": []
+  },
+  {
+   "id": "vico-alto:cella-menta",
+   "nome": "Cella Menta",
+   "squadra": "vico-alto",
+   "alias": []
+  },
+  {
+   "id": "vico-alto:papini-cesare",
+   "nome": "Papini Cesare",
+   "squadra": "vico-alto",
+   "alias": []
+  },
+  {
+   "id": "sienterina:barcelli-alessio",
+   "nome": "Barcelli Alessio",
+   "squadra": "sienterina",
+   "alias": []
+  },
+  {
+   "id": "sienterina:camara-omar",
+   "nome": "Camara Omar",
+   "squadra": "sienterina",
+   "alias": []
+  },
+  {
+   "id": "vico-alto:nestore-matias",
+   "nome": "Nestore Matias",
+   "squadra": "vico-alto",
+   "alias": []
+  },
+  {
+   "id": "vico-alto:bruni-andrea",
+   "nome": "Bruni Andrea",
+   "squadra": "vico-alto",
+   "alias": []
+  },
+  {
+   "id": "ponte-d-arbia:tramacere-guido",
+   "nome": "Tramacere Guido",
+   "squadra": "ponte-d-arbia",
+   "alias": []
+  },
+  {
+   "id": "ponte-d-arbia:vera-luigi",
+   "nome": "Vera Luigi",
+   "squadra": "ponte-d-arbia",
+   "alias": []
+  },
+  {
+   "id": "ponte-d-arbia:zefiro-vincenzo",
+   "nome": "Zefiro Vincenzo",
+   "squadra": "ponte-d-arbia",
+   "alias": []
+  },
+  {
+   "id": "warriors:accupato-paolo",
+   "nome": "Accupato Paolo",
+   "squadra": "warriors",
+   "alias": []
+  },
+  {
+   "id": "warriors:leone-roberto",
+   "nome": "Leone Roberto",
+   "squadra": "warriors",
+   "alias": []
+  },
+  {
+   "id": "ponte-d-arbia:anselimi-giulio",
+   "nome": "Anselimi Giulio",
+   "squadra": "ponte-d-arbia",
+   "alias": []
+  }
+ ],
+ "sorteggi": {}
+}
