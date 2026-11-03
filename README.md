@@ -4,6 +4,9 @@ PWA per risultati, classifiche e (prossimamente) marcatori e disciplina del camp
 AICS di calcio a 8. Funziona nel browser di iPhone, Android e PC, anche offline, senza server e
 senza costi. I requisiti sono in [Prompt_Aics.md](Prompt_Aics.md).
 
+**App online:** <https://entongionn.github.io/calcio8/> (GitHub Pages, pubblicata dal branch `main`).
+Sul telefono: iPhone → Safari → Condividi → *Aggiungi alla schermata Home*; Android → Chrome → ⋮ → *Installa app*.
+
 ## Stato
 
 | Passo | Contenuto | Stato |
